@@ -1,190 +1,110 @@
 import React, { useState } from "react";
 import { Card, Button } from "flowbite-react";
 import { FaLinkedin, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
+import { teamMembers } from "../assets/data/TeamData";
 
-const TeamSection = () => {
-  const [activeDepartment, setActiveDepartment] = useState("Management");
-
-  const teamMembers = {
-    Management: [
-      {
-        name: "Sarah Johnson",
-        role: "Event Director",
-        image: "public/images/hero_image.jpg",
-        socials: {
-          linkedin: "#",
-          twitter: "#",
-          instagram: "#",
-        },
-      },
-      {
-        name: "Michael Chen",
-        role: "Operations Manager",
-        image: "/api/placeholder/400/400",
-        socials: {
-          linkedin: "#",
-          twitter: "#",
-          instagram: "#",
-        },
-      },
-    ],
-    Marketing: [
-      {
-        name: "Emma Rodriguez",
-        role: "Marketing Lead",
-        image: "/api/placeholder/400/400",
-        socials: {
-          linkedin: "#",
-          twitter: "#",
-          instagram: "#",
-        },
-      },
-      {
-        name: "Alex Kim",
-        role: "Social Media Coordinator",
-        image: "/api/placeholder/400/400",
-        socials: {
-          linkedin: "#",
-          twitter: "#",
-          instagram: "#",
-        },
-      },
-    ],
-    Technical: [
-      {
-        name: "David Wong",
-        role: "Technical Director",
-        image: "/api/placeholder/400/400",
-        socials: {
-          linkedin: "#",
-          github: "#",
-          twitter: "#",
-        },
-      },
-      {
-        name: "Rachel Patel",
-        role: "Event Tech Specialist",
-        image: "/api/placeholder/400/400",
-        socials: {
-          linkedin: "#",
-          github: "#",
-          twitter: "#",
-        },
-      },
-    ],
-    Operations: [
-      {
-        name: "Carlos Mendez",
-        role: "Logistics Coordinator",
-        image: "/api/placeholder/400/400",
-        socials: {
-          linkedin: "#",
-          instagram: "#",
-          twitter: "#",
-        },
-      },
-      {
-        name: "Olivia Kim",
-        role: "Venue Management",
-        image: "/api/placeholder/400/400",
-        socials: {
-          linkedin: "#",
-          instagram: "#",
-          twitter: "#",
-        },
-      },
-    ],
-  };
-
-  const departments = Object.keys(teamMembers);
-
-  const renderSocialIcons = (socials) => {
-    const iconMap = {
-      linkedin: FaLinkedin,
-      twitter: FaTwitter,
-      instagram: FaInstagram,
-      github: FaGithub,
-    };
-
-    return (
-      <div className="flex justify-center space-x-3 mt-4">
-        {Object.entries(socials).map(([platform, link]) => {
-          const IconComponent = iconMap[platform];
-          return (
-            <a
-              key={platform}
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-600 hover:text-blue-600 transition-colors"
-            >
-              <IconComponent size={24} />
-            </a>
-          );
-        })}
-      </div>
-    );
+const renderSocialIcons = (socials) => {
+  const iconMap = {
+    linkedin: FaLinkedin,
+    twitter: FaTwitter,
+    instagram: FaInstagram,
+    github: FaGithub,
   };
 
   return (
-    <section className="relative py-16 bg-gray-50">
+    <div className="flex justify-center space-x-3 mt-2">
+      {Object.entries(socials).map(([platform, link]) => {
+        const IconComponent = iconMap[platform];
+        return (
+          <a
+            key={platform}
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-blue-400 transition-colors hover:scale-110 transform duration-300"
+          >
+            <IconComponent size={20} />
+          </a>
+        );
+      })}
+    </div>
+  );
+};
+
+const TeamSection = () => {
+  const [activeDepartment, setActiveDepartment] = useState("Management");
+  const departments = Object.keys(teamMembers);
+
+  return (
+    <section className="relative py-16 bg-gray-900 min-h-screen w-full">
       {/* Background Image with Gradient Overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center z-0"
+        className="absolute inset-0 bg-fixed bg-center"
         style={{
-          backgroundImage: "url(/api/placeholder/1920/1080)",
+          backgroundImage: "url(/images/hero_image.jpg)",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          filter: "brightness(0.3)",
+          filter: "brightness(1)",
         }}
       />
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-900/70 to-indigo-900/70 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
 
-      <div className="relative z-20 container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
-          Our Team
+      <div className="relative container mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center mb-12 text-white drop-shadow-lg">
+          Meet Our Team
         </h2>
 
         {/* Department Navigation */}
-        <div className="flex flex-wrap justify-center space-x-2 md:space-x-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
           {departments.map((dept) => (
             <Button
               key={dept}
               color={activeDepartment === dept ? "blue" : "gray"}
               onClick={() => setActiveDepartment(dept)}
-              className="px-3 md:px-6 py-2 mb-2"
+              className="rounded-full transform transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               {dept}
             </Button>
           ))}
         </div>
 
-        {/* Team Members Grid */}
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+        {/* Team Members Container - Updated with flex */}
+        <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
           {teamMembers[activeDepartment].map((member) => (
-            <Card
-              key={member.name}
-              className="max-w-sm mx-auto w-full transform transition-all duration-300 hover:scale-105 hover:shadow-xl bg-white/90 backdrop-blur-sm overflow-hidden"
-            >
-              <div className="relative w-full pb-[100%]">
-                <img
-                  className="absolute inset-0 w-full h-full object-cover"
-                  src={member.image}
-                  alt={`${member.name} profile`}
-                />
-              </div>
-              <div className="p-4 pt-0 text-center">
-                <h5 className="mt-4 mb-1 text-lg md:text-xl font-medium text-gray-900">
-                  {member.name}
-                </h5>
-                <span className="text-xs md:text-sm text-gray-500 block mb-2">
-                  {member.role}
-                </span>
-                {renderSocialIcons(member.socials)}
-              </div>
-            </Card>
+            <div className="w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)] lg:w-[calc(25%-18px)] max-w-sm">
+              <Card
+                key={member.name}
+                className="relative group h-96 w-full overflow-hidden border-0 bg-transparent transition-transform duration-500 ease-in-out hover:scale-105"
+                imgAlt={`${member.name} profile`}
+                imgSrc={member.image}
+              >
+                <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-110">
+                  <img
+                    className="w-full h-full object-cover transition-transform duration-500"
+                    src={member.image}
+                    alt={`${member.name} profile`}
+                  />
+
+                  {/* Gradient overlay for text visibility */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent opacity-100 group-hover:opacity-95 transition-opacity duration-500" />
+                </div>
+
+                {/* Content container */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 text-center transform transition-all duration-500 translate-y-2 group-hover:translate-y-0">
+                  <div className="backdrop-blur-md bg-gray-900/30 rounded-lg p-3 transform transition-all duration-500 group-hover:bg-gray-900/50 group-hover:shadow-xl">
+                    <h5 className="text-xl font-semibold text-white mb-2 transform transition-all duration-500 group-hover:scale-105">
+                      {member.name}
+                    </h5>
+                    <span className="text-sm text-gray-200 block mb-3 opacity-90 group-hover:opacity-100 transition-opacity duration-500">
+                      {member.role}
+                    </span>
+                    {renderSocialIcons(member.socials)}
+                  </div>
+                </div>
+              </Card>
+            </div>
           ))}
         </div>
       </div>

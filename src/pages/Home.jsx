@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <section className="relative h-[92vh] w-full overflow-hidden">
+    <section className="relative h-[97vh] w-full overflow-hidden">
       {/* Background Image with Gradient Overlay */}
       <div className="absolute inset-0 bg-[url('/images/hero_image.jpg')] bg-cover bg-center bg-no-repeat">
         {/* Dark Gradient Overlay */}
