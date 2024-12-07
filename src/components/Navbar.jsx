@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <Navbar fluid rounded>
+    <Navbar fluid>
       <Navbar.Brand>
         <Link to="/">
           <img
@@ -17,7 +17,9 @@ const Header = () => {
         </span>
       </Navbar.Brand>
       <div className="flex md:order-2">
-        <Button>Register</Button>
+        <Link to="/register">
+          <Button>Register</Button>
+        </Link>
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
