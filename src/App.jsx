@@ -1,10 +1,11 @@
 import "./App.css";
-import { Button } from "./components/ui/button";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
     <>
-      <div>App</div>
+      <Navbar />
+      <div className="app-component">App</div>
     </>
   );
 };
