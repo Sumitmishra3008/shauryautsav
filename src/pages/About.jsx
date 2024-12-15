@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 // Card Component
 const Card = ({ image, designation }) => {
@@ -95,4 +96,4 @@ const About = () => {
   );
 };
 
-export default AboutUs;
+export default About;
