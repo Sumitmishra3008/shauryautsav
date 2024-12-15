@@ -1,44 +1,6 @@
 import React, { useState } from "react";
-import { Card, Button, Modal } from "flowbite-react";
-
-const eventsData = [
-  {
-    id: 1,
-    name: "Basketball Slam",
-    description: "Exciting basketball games featuring top teams.",
-    date: "15-16 March",
-    image:
-      "data:image/png;base64,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",
-  },
-  {
-    id: 2,
-    name: "Volleyball Showdown",
-    description: "Competitive volleyball matches showcasing athletic skills.",
-    date: "22-23 March",
-    image: "/images/volleyball.jpg",
-    details:
-      "High-energy volleyball competition with strategic gameplay and team collaboration.",
-  },
-  {
-    id: 3,
-    name: "Chess Championship",
-    description: "Strategic mind sports tournament for chess enthusiasts.",
-    date: "5-6 April",
-    image: "/images/chess.jpg",
-    details:
-      "Intense chess matches testing mental prowess and strategic thinking.",
-  },
-  {
-    id: 4,
-    name: "Track and Field",
-    description:
-      "Athletic competition featuring various track and field events.",
-    date: "12-13 April",
-    image: "/images/track.jpg",
-    details:
-      "Showcase of speed, strength, and athletic excellence across multiple disciplines.",
-  },
-];
+import { Button, Modal } from "flowbite-react";
+import { eventsData } from "../assets/data/EventData.js";
 
 const EventsSection = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
