@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <section className="relative h-[97vh] w-full overflow-hidden">
       {/* Background Image with Gradient Overlay */}
-      <div className="absolute inset-0 bg-[url('/images/hero_image.jpg')] bg-cover bg-center bg-no-repeat">
+      <div className="absolute inset-0 bg-[url('/images/hero_image.jpg')] bg-fixed bg-cover bg-center bg-no-repeat">
         {/* Dark Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
       </div>
