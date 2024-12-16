@@ -35,12 +35,15 @@ function Component() {
               <Footer.Title title="Contact us" />
               <Footer.LinkGroup col>
                 <Footer.Link href="#">
-                  Coordinator: Sandeep <br />
-                  Email: sandeep@gmail.com
+                  Coordinator: Sandeep kumar patel <br />
+                  Email:Sandeep8175063305@gmail.com <br />
+                  Mobile: 6389181405
                 </Footer.Link>
                 <Footer.Link href="#">
-                  Vice Coordinator: Abhisekh <br />
-                  Email: abhisekh@gmail.com
+                  Vice Coordinator: Abhisekh Mishra <br />
+                  Email:mabhishekmishra029@gmail.com
+                  <br />
+                  Mobile: 6306505310
                 </Footer.Link>
               </Footer.LinkGroup>
             </div>
