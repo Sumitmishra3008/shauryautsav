@@ -40,7 +40,7 @@ function Component() {
                   Mobile: 6389181405
                 </Footer.Link>
                 <Footer.Link href="#">
-                  Vice Coordinator: Abhisekh Mishra <br />
+                  Coordinator: Abhishek Mishra <br />
                   Email:mabhishekmishra029@gmail.com
                   <br />
                   Mobile: 6306505310
