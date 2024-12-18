@@ -8,41 +8,56 @@ import {
 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-function Component() {
+function components() {
   return (
-    <Footer container className="rounded-none dark:bg-gray-900 ">
+    <Footer container className="rounded-none dark:bg-gray-900 p-4">
       <div className="w-full">
-        <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-          <div>
-            <Link to="/">
+        <div className="flex flex-col sm:flex-row justify-between items-start space-y-4 sm:space-y-0">
+          <div className="w-full sm:w-auto text-center sm:text-left mb-4 sm:mb-0">
+            <Link to="/" className="inline-block">
               <Footer.Brand
                 src="https://spardha.org.in/images/logo/spardha-logo-white.png"
                 alt="ShauryaAutsav Logo"
                 name="ShauryaAutsav"
+                className="mx-auto sm:mx-0"
               />
             </Link>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-2 sm:gap-6">
-            <div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full sm:w-auto">
+            <div className="text-center sm:text-left">
               <Footer.Title title="ShauryaAutsav" />
               <Footer.LinkGroup col>
-                <Footer.Link href="#">IET Lucknow, Uttar Pradesh</Footer.Link>
-                <Footer.Link href="#">ShauryaAutsav@gmail.com</Footer.Link>
-                <Footer.Link href="#">ShauryaAutsav@gmail.com</Footer.Link>
+                <Footer.Link
+                  href="https://maps.google.com/IETLucknow"
+                  className="text-center sm:text-left"
+                >
+                  IET Lucknow, Uttar Pradesh
+                </Footer.Link>
+                <Footer.Link
+                  href="mailto:ShauryaAutsav@gmail.com"
+                  className="text-center sm:text-left"
+                >
+                  ShauryaAutsav@gmail.com
+                </Footer.Link>
               </Footer.LinkGroup>
             </div>
-            <div>
+            <div className="text-center sm:text-left">
               <Footer.Title title="Contact us" />
               <Footer.LinkGroup col>
-                <Footer.Link href="#">
-                  Coordinator: Sandeep kumar patel <br />
-                  Email:Sandeep8175063305@gmail.com <br />
+                <Footer.Link
+                  href="mailto:Sandeep8175063305@gmail.com"
+                  className="text-center sm:text-left"
+                >
+                  Coordinator: Sandeep Kumar Patel <br />
+                  Email: Sandeep8175063305@gmail.com <br />
                   Mobile: 6389181405
                 </Footer.Link>
-                <Footer.Link href="#">
+                <Footer.Link
+                  href="mailto:mabhishekmishra029@gmail.com"
+                  className="text-center sm:text-left"
+                >
                   Coordinator: Abhishek Mishra <br />
-                  Email:mabhishekmishra029@gmail.com
-                  <br />
+                  Email: mabhishekmishra029@gmail.com <br />
                   Mobile: 6306505310
                 </Footer.Link>
               </Footer.LinkGroup>
@@ -50,14 +65,34 @@ function Component() {
           </div>
         </div>
         <Footer.Divider />
-        <div className="w-full sm:flex sm:items-center sm:justify-between">
-          <Footer.Copyright href="/" by="ShauryaAutsav" year={2025} />
-          <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-            <Footer.Icon href="#" icon={BsFacebook} />
-            <Footer.Icon href="#" icon={BsInstagram} />
-            <Footer.Icon href="#" icon={BsTwitter} />
-            <Footer.Icon href="#" icon={BsGithub} />
-            <Footer.Icon href="#" icon={BsDribbble} />
+        <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
+          <Footer.Copyright
+            href="/"
+            by="ShauryaAutsav"
+            year={2025}
+            className="text-center sm:text-left w-full sm:w-auto"
+          />
+          <div className="flex space-x-6 justify-center w-full sm:w-auto">
+            <Footer.Icon
+              href="https://www.facebook.com/shauryautsav"
+              icon={BsFacebook}
+            />
+            <Footer.Icon
+              href="https://www.instagram.com/shauryautsav"
+              icon={BsInstagram}
+            />
+            <Footer.Icon
+              href="https://www.twitter.com/shauryautsav"
+              icon={BsTwitter}
+            />
+            <Footer.Icon
+              href="https://www.github.com/shauryautsav"
+              icon={BsGithub}
+            />
+            <Footer.Icon
+              href="https://www.dribbble.com/shauryautsav"
+              icon={BsDribbble}
+            />
           </div>
         </div>
       </div>
@@ -65,4 +100,4 @@ function Component() {
   );
 }
 
-export default Component;
+export default components;
