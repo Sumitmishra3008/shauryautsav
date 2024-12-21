@@ -20,7 +20,7 @@ export const eventsData = [
     name: "Chess Championship",
     description: "Strategic mind sports tournament for chess enthusiasts.",
     date: "5-6 April",
-    image: "/images/chess.jpg",
+    image: "/images/events/chess.svg",
     details:
       "Intense chess matches testing mental prowess and strategic thinking.",
   },
@@ -35,12 +35,62 @@ export const eventsData = [
       "Showcase of speed, strength, and athletic excellence across multiple disciplines.",
   },
   {
-    id: 4,
+    id: 5,
     name: "Badminton Championship",
     description:
       "Athletic competition featuring various track and field events.",
     date: "12-13 April",
     image: "/images/events/badminton.svg",
+    details:
+      "Showcase of speed, strength, and athletic excellence across multiple disciplines.",
+  },
+  {
+    id: 6,
+    name: "Cricket",
+    description:
+      "Athletic competition featuring various track and field events.",
+    date: "12-13 April",
+    image: "/images/events/cricket.svg",
+    details:
+      "Showcase of speed, strength, and athletic excellence across multiple disciplines.",
+  },
+  {
+    id: 7,
+    name: "Football",
+    description:
+      "Athletic competition featuring various track and field events.",
+    date: "12-13 April",
+    image: "/images/events/football.svg",
+    details:
+      "Showcase of speed, strength, and athletic excellence across multiple disciplines.",
+  },
+  {
+    id: 8,
+    name: "Taekwondo Championship",
+    description:
+      "Athletic competition featuring various track and field events.",
+    date: "12-13 April",
+    image: "/images/events/taekwondo.svg",
+    details:
+      "Showcase of speed, strength, and athletic excellence across multiple disciplines.",
+  },
+  {
+    id: 9,
+    name: "Kabaddi Championship",
+    description:
+      "Athletic competition featuring various track and field events.",
+    date: "12-13 April",
+    image: "/images/events/kabaddi.svg",
+    details:
+      "Showcase of speed, strength, and athletic excellence across multiple disciplines.",
+  },
+  {
+    id: 10,
+    name: "Table Tennis Championship",
+    description:
+      "Athletic competition featuring various track and field events.",
+    date: "12-13 April",
+    image: "/images/events/tabletennis.svg",
     details:
       "Showcase of speed, strength, and athletic excellence across multiple disciplines.",
   },
