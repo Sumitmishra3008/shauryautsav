@@ -65,7 +65,8 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center bg-gray-800/30 rounded-xl p-8 backdrop-blur-sm">
             <div className="overflow-hidden rounded-lg shadow-lg">
               <img
-                src="https://via.placeholder.com/600x400"
+                style={{ height: "400px", width: "600px" }}
+                src="images/vineet_kansal.jpg"
                 alt="secondary image"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
               />
@@ -80,6 +81,69 @@ const About = () => {
                 joy of victory at Shourya-Utsav.
               </p>
             </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-center bg-gray-800/30 rounded-xl p-8 backdrop-blur-sm">
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img
+                style={{ height: "400px", width: "600px" }}
+                src="images/faculty_advisor.jpg"
+                alt="secondary image"
+                className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-bold mb-4 text-white">
+                Join the Spirit
+              </h3>
+              <p className="text-lg text-white/90 leading-relaxed">
+                Stay tuned for exciting matches, amazing performances, and the
+                spirit of sports! Experience the thrill of competition and the
+                joy of victory at Shourya-Utsav.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-center bg-gray-800/30 rounded-xl p-8 backdrop-blur-sm">
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img
+                style={{ height: "400px", width: "600px" }}
+                src="images/pkt.jpg"
+                alt="secondary image"
+                className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-bold mb-4 text-white">
+                Join the Spirit
+              </h3>
+              <p className="text-lg text-white/90 leading-relaxed">
+                Stay tuned for exciting matches, amazing performances, and the
+                spirit of sports! Experience the thrill of competition and the
+                joy of victory at Shourya-Utsav.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-center bg-gray-800/30 rounded-xl p-8 backdrop-blur-sm">
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img
+                style={{ height: "400px", width: "600px" }}
+                src="images/satyendra_singh.jpg"
+                alt="secondary image"
+                className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </div>
+          <div className="text-center md:text-left">
+            <h3 className="text-2xl font-bold mb-4 text-white">
+              Join the Spirit
+            </h3>
+            <p className="text-lg text-white/90 leading-relaxed">
+              Stay tuned for exciting matches, amazing performances, and the
+              spirit of sports! Experience the thrill of competition and the joy
+              of victory at Shourya-Utsav.
+            </p>
           </div>
         </div>
 
