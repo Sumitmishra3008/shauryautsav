@@ -16,10 +16,11 @@ function components() {
           <div className="w-full sm:w-auto text-center sm:text-left mb-4 sm:mb-0">
             <Link to="/" className="inline-block">
               <Footer.Brand
-                src="https://spardha.org.in/images/logo/spardha-logo-white.png"
+                src="images/shauryotsava_logo2.png"
                 alt="ShauryaAutsav Logo"
                 name="ShauryaAutsav"
-                className="mx-auto sm:mx-0"
+                // className="mx-auto sm:mx-0"
+                className="w-20 h-20 md:w-100% md:h-100%  "
               />
             </Link>
           </div>
