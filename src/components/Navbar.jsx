@@ -14,8 +14,8 @@ const Header = () => {
         <Navbar.Brand>
           <Link to="/">
             <img
-              src="images/shauryotsava_logo.jpg"
-              className="mr-3 h-9 sm:h-9"
+              src="images/shauryotsava_logo2.png"
+              className="mr-3 h-9 sm:h-15"
               alt="Shauryotsava Logo"
             />
           </Link>

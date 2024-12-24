@@ -14,9 +14,9 @@ const Home = () => {
         <div className="text-center">
           <div className="mb-8 flex justify-center">
             <img
-              src="images/shauryotsava_logo.jpg"
+              src="images/shauryotsava_logo2.png"
               alt="Shauryotsava Logo"
-              className="w-24 h-24 md:w-32 md:h-32  "
+              className="w-96 h-100% md:w-100% md:h-100%  "
             />
           </div>
 
