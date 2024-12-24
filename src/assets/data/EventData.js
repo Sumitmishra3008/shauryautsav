@@ -4,14 +4,14 @@ export const eventsData = [
     name: "Basketball Slam",
     description: "Exciting basketball games featuring top teams.",
     date: "15-16 March",
-    image: "/images/events/basketball.svg",
+    image: "/images/events/basketball.png",
   },
   {
     id: 2,
     name: "Volleyball Showdown",
     description: "Competitive volleyball matches showcasing athletic skills.",
     date: "22-23 March",
-    image: "/images/events/volleyball.svg",
+    image: "/images/events/volleyball.png",
     details:
       "High-energy volleyball competition with strategic gameplay and team collaboration.",
   },
@@ -20,7 +20,7 @@ export const eventsData = [
     name: "Chess Championship",
     description: "Strategic mind sports tournament for chess enthusiasts.",
     date: "5-6 April",
-    image: "/images/events/chess.svg",
+    image: "/images/events/chess.jpg",
     details:
       "Intense chess matches testing mental prowess and strategic thinking.",
   },
@@ -30,7 +30,7 @@ export const eventsData = [
     description:
       "Athletic competition featuring various track and field events.",
     date: "12-13 April",
-    image: "/images/events/athletics.svg",
+    image: "/images/events/track.jpg",
     details:
       "Showcase of speed, strength, and athletic excellence across multiple disciplines.",
   },
@@ -40,7 +40,7 @@ export const eventsData = [
     description:
       "Athletic competition featuring various track and field events.",
     date: "12-13 April",
-    image: "/images/events/badminton.svg",
+    image: "/images/events/badminton.jpg",
     details:
       "Showcase of speed, strength, and athletic excellence across multiple disciplines.",
   },
@@ -50,7 +50,7 @@ export const eventsData = [
     description:
       "Athletic competition featuring various track and field events.",
     date: "12-13 April",
-    image: "/images/events/cricket.svg",
+    image: "/images/events/cricket.jpg",
     details:
       "Showcase of speed, strength, and athletic excellence across multiple disciplines.",
   },
@@ -60,7 +60,7 @@ export const eventsData = [
     description:
       "Athletic competition featuring various track and field events.",
     date: "12-13 April",
-    image: "/images/events/football.svg",
+    image: "/images/events/football.jpg",
     details:
       "Showcase of speed, strength, and athletic excellence across multiple disciplines.",
   },
@@ -70,7 +70,7 @@ export const eventsData = [
     description:
       "Athletic competition featuring various track and field events.",
     date: "12-13 April",
-    image: "/images/events/taekwondo.svg",
+    image: "/images/events/taekwondo.jpg",
     details:
       "Showcase of speed, strength, and athletic excellence across multiple disciplines.",
   },
@@ -80,7 +80,7 @@ export const eventsData = [
     description:
       "Athletic competition featuring various track and field events.",
     date: "12-13 April",
-    image: "/images/events/kabaddi.svg",
+    image: "/images/events/kabaddi.jpg",
     details:
       "Showcase of speed, strength, and athletic excellence across multiple disciplines.",
   },
@@ -90,7 +90,7 @@ export const eventsData = [
     description:
       "Athletic competition featuring various track and field events.",
     date: "12-13 April",
-    image: "/images/events/tabletennis.svg",
+    image: "/images/events/table_tennis.jpg",
     details:
       "Showcase of speed, strength, and athletic excellence across multiple disciplines.",
   },

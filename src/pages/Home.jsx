@@ -14,14 +14,14 @@ const Home = () => {
         <div className="text-center">
           <div className="mb-8 flex justify-center">
             <img
-              src="https://spardha.org.in/images/logo/spardha-logo-white.png"
-              alt="ShauryaUtsav Logo"
-              className="w-24 h-24 md:w-32 md:h-32 object-contain filter brightness-0 invert"
+              src="images/shauryotsava_logo.jpg"
+              alt="Shauryotsava Logo"
+              className="w-24 h-24 md:w-32 md:h-32  "
             />
           </div>
 
           <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-white">
-            ShauryaUtsav 2025
+            Shauryotsava 2025
           </h1>
           <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
             Play like there's no tomorrow

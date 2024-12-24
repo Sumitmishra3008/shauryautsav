@@ -14,13 +14,13 @@ const Header = () => {
         <Navbar.Brand>
           <Link to="/">
             <img
-              src="https://spardha.org.in/images/logo/spardha-logo-white.png"
-              className="mr-3 h-6 sm:h-9"
-              alt="ShauryAutsav"
+              src="images/shauryotsava_logo.jpg"
+              className="mr-3 h-9 sm:h-9"
+              alt="Shauryotsava Logo"
             />
           </Link>
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-            Shauryautsav
+            Shauryotsava
           </span>
         </Navbar.Brand>
         <div className="flex md:order-2">
