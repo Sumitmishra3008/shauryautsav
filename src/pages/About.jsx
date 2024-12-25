@@ -110,7 +110,7 @@ const About = () => {
               />
             </div>
             <div className="text-center md:text-left">
-              <h3 className="text-2xl font-bold mb-4 text-white">Message</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Message!</h3>
               <p className="text-lg text-white/90 leading-relaxed">
                 Dear Students,
                 <br />
