@@ -2,18 +2,32 @@ const Sponsors = () => {
   // Local Card Component
   const Card = ({ imageSrc, altText }) => {
     return (
-      <div className="bg-gray-800 p-6 rounded-lg shadow-lg flex items-center justify-center">
-        <img src={imageSrc} alt={altText} className="max-h-16 object-contain" />
+      <div className="bg-transparent p-0   flex items-center justify-center">
+        <img
+          src={imageSrc}
+          alt={altText}
+          className="max-h-48 object-contain bg-cover"
+        />
       </div>
     );
   };
 
   // List of sponsors with their images and alt texts
   const sponsors = [
-    { imageSrc: "/images/teamImages/sumit.png", altText: "Sponsor 1" },
-    { imageSrc: "/images/teamImages/sumit.png", altText: "Sponsor 2" },
-    { imageSrc: "/images/teamImages/sumit.png", altText: "Sponsor 3" },
-    { imageSrc: "/images/teamImages/sumit.png", altText: "Sponsor 4" },
+    { imageSrc: "/images/sponsors/sponsor1.png", altText: "Sponsor 1" },
+    { imageSrc: "/images/sponsors/sponsor2.png", altText: "Sponsor 1" },
+    { imageSrc: "/images/sponsors/sponsor3.png", altText: "Sponsor 1" },
+    { imageSrc: "/images/sponsors/sponsor4.jpg", altText: "Sponsor 1" },
+    { imageSrc: "/images/sponsors/sponsor5.png", altText: "Sponsor 1" },
+    { imageSrc: "/images/sponsors/sponsor6.png", altText: "Sponsor 1" },
+    { imageSrc: "/images/sponsors/sponsor7.png", altText: "Sponsor 1" },
+    { imageSrc: "/images/sponsors/sponsor8.png", altText: "Sponsor 1" },
+    { imageSrc: "/images/sponsors/sponsor9.png", altText: "Sponsor 1" },
+    { imageSrc: "/images/sponsors/sponsor10.png", altText: "Sponsor 1" },
+    { imageSrc: "/images/sponsors/sponsor11.png", altText: "Sponsor 1" },
+    { imageSrc: "/images/sponsors/sponsor12.png", altText: "Sponsor 1" },
+    { imageSrc: "/images/sponsors/sponsor13.png", altText: "Sponsor 1" },
+    { imageSrc: "/images/sponsors/sponsor14.jpg", altText: "Sponsor 1" },
   ];
 
   return (
