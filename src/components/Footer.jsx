@@ -17,8 +17,8 @@ function components() {
             <Link to="/" className="inline-block">
               <Footer.Brand
                 src="images/shauryotsava_logo2.png"
-                alt="ShauryaAutsav Logo"
-                name="ShauryaAutsav"
+                alt="Shauryotsava Logo"
+                name="Shauryotsava"
                 // className="mx-auto sm:mx-0"
                 className="w-20 h-20 md:w-100% md:h-100%  "
               />
@@ -26,7 +26,7 @@ function components() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full sm:w-auto">
             <div className="text-center sm:text-left">
-              <Footer.Title title="ShauryaAutsav" />
+              <Footer.Title title="Shauryotsava" />
               <Footer.LinkGroup col>
                 <Footer.Link
                   href="https://maps.google.com/IETLucknow"
@@ -35,10 +35,10 @@ function components() {
                   IET Lucknow, Uttar Pradesh
                 </Footer.Link>
                 <Footer.Link
-                  href="mailto:ShauryaAutsav@gmail.com"
+                  href="mailto:Shauryotsava@gmail.com"
                   className="text-center sm:text-left"
                 >
-                  ShauryaAutsav@gmail.com
+                  Shauryotsava@gmail.com
                 </Footer.Link>
               </Footer.LinkGroup>
             </div>
@@ -69,29 +69,29 @@ function components() {
         <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
           <Footer.Copyright
             href="/"
-            by="ShauryaAutsav"
+            by="Shauryotsava"
             year={2025}
             className="text-center sm:text-left w-full sm:w-auto"
           />
           <div className="flex space-x-6 justify-center w-full sm:w-auto">
             <Footer.Icon
-              href="https://www.facebook.com/shauryautsav"
+              href="https://www.facebook.com/shauryotsava"
               icon={BsFacebook}
             />
             <Footer.Icon
-              href="https://www.instagram.com/shauryautsav"
+              href="https://www.instagram.com/shauryotsava"
               icon={BsInstagram}
             />
             <Footer.Icon
-              href="https://www.twitter.com/shauryautsav"
+              href="https://www.twitter.com/shauryotsava"
               icon={BsTwitter}
             />
             <Footer.Icon
-              href="https://www.github.com/shauryautsav"
+              href="https://www.github.com/shauryotsava"
               icon={BsGithub}
             />
             <Footer.Icon
-              href="https://www.dribbble.com/shauryautsav"
+              href="https://www.dribbble.com/shauryotsava"
               icon={BsDribbble}
             />
           </div>

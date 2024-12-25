@@ -103,34 +103,6 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center bg-gray-800/30 rounded-xl p-8 backdrop-blur-sm">
             <div className="overflow-hidden rounded-lg shadow-lg">
               <img
-                // style={{ height: "400px", width: "600px" }}
-                src="images/vineet_kansal.jpg"
-                alt="secondary image"
-                className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="text-center md:text-left">
-              <h3 className="text-2xl font-bold mb-4 text-white">Message!</h3>
-              <p className="text-lg text-white/90 leading-relaxed">
-                I am thrilled to see you all gear up for Shauryotsava 2025!{" "}
-                <br />
-                This is your chance to showcase your skills, test your limits,
-                and compete with passion and pride. Push your boundaries, and
-                experience the thrill of victory. Best of luck to all—let the
-                game begin!
-                <br />
-                Warm regards,
-                <br />
-                Vineet Kansal
-                <br />
-                Director, IET Lucknow
-              </p>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 items-center bg-gray-800/30 rounded-xl p-8 backdrop-blur-sm">
-            <div className="overflow-hidden rounded-lg shadow-lg">
-              <img
                 style={{ height: "400px", width: "600px" }}
                 src="images/faculty_advisor.jpg"
                 alt="secondary image"
@@ -160,8 +132,36 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center bg-gray-800/30 rounded-xl p-8 backdrop-blur-sm">
             <div className="overflow-hidden rounded-lg shadow-lg">
               <img
+                // style={{ height: "400px", width: "600px" }}
+                src="images/vineet_kansal.jpg"
+                alt="secondary image"
+                className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-bold mb-4 text-white">Message!</h3>
+              <p className="text-lg text-white/90 leading-relaxed">
+                I am thrilled to see you all gear up for Shauryotsava 2025!{" "}
+                <br />
+                This is your chance to showcase your skills, test your limits,
+                and compete with passion and pride. Push your boundaries, and
+                experience the thrill of victory. Best of luck to all—let the
+                game begin!
+                <br />
+                Warm regards,
+                <br />
+                Vineet Kansal
+                <br />
+                Director, IET Lucknow
+              </p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-center bg-gray-800/30 rounded-xl p-8 backdrop-blur-sm">
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <img
                 style={{ height: "400px", width: "600px" }}
-                src="images/pkt.jpg"
+                src="images/pkt.png"
                 alt="secondary image"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
               />
@@ -188,8 +188,8 @@ const About = () => {
             <div className="overflow-hidden rounded-lg shadow-lg">
               <img
                 style={{
-                  height: "600px",
-                  width: "450px",
+                  height: "450px",
+                  width: "600px",
                   backgroundSize: "cover",
                 }}
                 src="images/satyendra_singh.jpg"
@@ -198,7 +198,7 @@ const About = () => {
               />
             </div>
             <div className="text-center md:text-left">
-              <h3 className="text-2xl font-bold mb-4 text-white">Message</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Message!</h3>
               <p className="text-lg text-white/90 leading-relaxed">
                 Welcome to Shauryotsava, the annual sports fest of IET Lucknow.
                 This event celebrates sportsmanship, teamwork, and excellence.

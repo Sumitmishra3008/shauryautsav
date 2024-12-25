@@ -9,6 +9,7 @@ import Register from "./pages/Register";
 import Sponsors from "./pages/Sponsors";
 import Team from "./pages/Team";
 import Footer from "./components/Footer";
+import CricketRegistration from "./pages/CricketRegistration.jsx";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/team" element={<Team />} />
         </Routes>
+        {/* <CricketRegistration /> */}
       </div>
       <Footer />
     </>
