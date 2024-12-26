@@ -109,22 +109,15 @@ const About = () => {
           <MessageCard
             image="images/faculty_advisor.jpg"
             message="Dear Students, Shauryotsava is a celebration of athleticism, teamwork, and determination. As you participate in this exciting fest, remember that every challenge is an opportunity to grow, collaborate, and give your best. May this event inspire you to achieve new heights, both on and off the field."
-            name="Dr. J.P. Pandey"
-            designation="Vice Chancellor, IET Lucknow"
+            name="Prof. J.P. Pandey"
+            designation="Vice Chancellor, Dr. A.P.J. Abdul Kalam Technical University, Lucknow"
           />
 
           <MessageCard
             image="images/vineet_kansal.jpg"
             message="I am thrilled to see you all gear up for Shauryotsava 2025! This is your chance to showcase your skills, test your limits, and compete with passion and pride. Push your boundaries, and experience the thrill of victory. Best of luck to all—let the game begin!"
-            name="Vineet Kansal"
+            name="Prof. Vineet Kansal"
             designation="Director, IET Lucknow"
-          />
-
-          <MessageCard
-            image="images/pkt.png"
-            message="Shauryotsava 2024, a celebration of excellence, teamwork, and sportsmanship. It is an opportunity to push boundaries, build connections, and inspire through determination and integrity. To all participants, wishing them success—let the games commence!"
-            name="Dr. Pawan Kumar Tiwari"
-            designation="ISSAC Chairman, IET Lucknow"
           />
 
           <MessageCard
@@ -132,6 +125,13 @@ const About = () => {
             message="Welcome to Shauryotsava, the annual sports fest of IET Lucknow. This event celebrates sportsmanship, teamwork, and excellence. My best wishes to all participants—play hard, play fair, and make it memorable!"
             name="Dr. Satyendra Singh"
             designation="ISSAC Chairman, IET Lucknow"
+          />
+
+          <MessageCard
+            image="images/pkt.png"
+            message="Shauryotsava 2024, a celebration of excellence, teamwork, and sportsmanship. It is an opportunity to push boundaries, build connections, and inspire through determination and integrity. To all participants, wishing them success—let the games commence!"
+            name="Dr. Pawan Kumar Tiwari"
+            designation="Sports Faculty Advisor and Shauryotsava Chairman, IET Lucknow"
           />
         </div>
 
