@@ -16,7 +16,7 @@ function components() {
           <div className="w-full sm:w-auto text-center sm:text-left mb-4 sm:mb-0">
             <Link to="/" className="inline-block">
               <Footer.Brand
-                src="images/shauryotsava_logo2.png"
+                src="./images/shauryotsava_logo2.png"
                 alt="Shauryotsava Logo"
                 name="Shauryotsava"
                 // className="mx-auto sm:mx-0"

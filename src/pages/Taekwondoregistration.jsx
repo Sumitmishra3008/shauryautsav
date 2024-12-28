@@ -1,119 +1,6 @@
 import React, { useState } from "react";
 
-const CricketRegistration = () => {
-  const GOOGLE_SCRIPT_URL = import.meta.env.VITE_API1;
-  const Url = import.meta.env.VITE_API2; // Replace with your URL
-  // Replace with your URL
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    // First submit team info
-    const teamData = new FormData();
-    teamData.append("timestamp", new Date().toISOString());
-    teamData.append("captainEmail", teamInfo.captainEmail);
-    teamData.append("captainName", teamInfo.captainName);
-    teamData.append("captainPhone", teamInfo.captainPhone);
-    teamData.append("collegeName", teamInfo.collegeName);
-    // const teamData = {
-    //   timestamp: new Date().toISOString(),
-    //   captainEmail: teamInfo.captainEmail,
-    //   captainName: teamInfo.captainName,
-    //   captainPhone: teamInfo.captainPhone,
-    //   collegeName: teamInfo.collegeName,
-    // };
-
-    // await submitToGoogleSheets(teamData, "Teams");
-
-    // Then submit each player's info
-    // for (const player of players) {
-    //   const playerData = {
-    //     teamName: teamInfo.collegeName,
-    //     ...player,
-    //   };
-    //   await submitToGoogleSheets(playerData, "Players");
-    // }
-
-    // Show success message
-    try {
-      const response = await fetch(GOOGLE_SCRIPT_URL, {
-        method: "POST",
-        body: teamData,
-      });
-
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-
-      for (const player of players) {
-        const playerData = new FormData();
-        playerData.append("teamName", teamInfo.collegeName);
-        playerData.append("playerNumber", players.indexOf(player) + 1);
-        playerData.append("name", player.name);
-        playerData.append("age", player.age);
-        playerData.append("role", player.role);
-        playerData.append("email", player.email);
-        playerData.append("mobile", player.mobile);
-        playerData.append("enrollmentNo", player.enrollmentNo);
-        playerData.append("aadharNo", player.aadharNo);
-        const playerResponse = await fetch(Url, {
-          method: "POST",
-          body: playerData,
-        });
-      }
-
-      setSubmitted(true);
-
-      // Reset form
-      setTeamInfo({
-        collegeName: "",
-        captainName: "",
-        captainEmail: "",
-        captainPhone: "",
-      });
-
-      setPlayers([
-        {
-          name: "",
-          age: "",
-          email: "",
-          mobile: "",
-          enrollmentNo: "",
-          aadharNo: "",
-          role: "",
-        },
-      ]);
-
-      // Reload after delay
-      //   setTimeout(() => {
-      //     window.location.reload();
-      //   }, 3000);
-      // }
-    } catch (error) {
-      console.error("Submission error:", error);
-      alert("Error submitting registration. Please try again.");
-    }
-  };
-
-  // const submitToGoogleSheets = async (data, sheetName) => {
-  //   const response = await fetch(GOOGLE_SCRIPT_URL, {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({
-  //       data: data,
-  //       sheet: sheetName,
-  //     }),
-  //   });
-
-  //   if (!response.ok) {
-  //     throw new Error("Failed to submit data");
-  //   }
-
-  //   return response.json();
-  // };
-
+const Taekwondoregistration = () => {
   const [players, setPlayers] = useState([
     {
       name: "",
@@ -150,7 +37,7 @@ const CricketRegistration = () => {
   };
 
   const addPlayer = () => {
-    if (players.length < 15) {
+    if (players.length < 12) {
       setPlayers([
         ...players,
         {
@@ -173,12 +60,12 @@ const CricketRegistration = () => {
     }
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setSubmitted(true);
-  //   // Add your form submission logic here
-  //   setTimeout(() => setSubmitted(false), 3000);
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+    // Add your form submission logic here
+    setTimeout(() => setSubmitted(false), 3000);
+  };
 
   return (
     <section className="relative py-16 bg-gray-900 min-h-screen w-full">
@@ -194,7 +81,7 @@ const CricketRegistration = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-white mb-4">
-              Cricket Team Registration
+              Basketball Team Registration
             </h1>
             <p className="text-gray-300">
               Register your team for Shauryotsava 2025
@@ -275,10 +162,10 @@ const CricketRegistration = () => {
                 <button
                   type="button"
                   onClick={addPlayer}
-                  disabled={players.length >= 15}
+                  disabled={players.length >= 12}
                   className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg disabled:opacity-50"
                 >
-                  Add Player ({players.length}/15)
+                  Add Player ({players.length}/12)
                 </button>
               </div>
 
@@ -431,4 +318,4 @@ const CricketRegistration = () => {
   );
 };
 
-export default CricketRegistration;
+export default Taekwondoregistration;
