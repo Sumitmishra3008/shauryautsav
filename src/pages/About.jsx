@@ -149,8 +149,8 @@ const About = () => {
             <Card
               image="images/abhishek.jpg"
               designation="Coordinator"
-              linkedinUrl="https://www.google.com"
-              instagramUrl="https://www.google.com"
+              linkedinUrl="https://www.linkedin.com/in/abhishek-mishra-702170293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              instagramUrl="https://www.instagram.com/mishra_abhiunstopable318/profilecard/?igsh=MTJxYnU2dHZ3dTJ5ZQ=="
             />
             <Card
               image="images/mansi.jpg"
