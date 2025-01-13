@@ -15,6 +15,7 @@ const CricketRegistration = () => {
     teamData.append("captainName", teamInfo.captainName);
     teamData.append("captainPhone", teamInfo.captainPhone);
     teamData.append("collegeName", teamInfo.collegeName);
+    teamData.append("event", "Cricket");
     // const teamData = {
     //   timestamp: new Date().toISOString(),
     //   captainEmail: teamInfo.captainEmail,
@@ -47,14 +48,16 @@ const CricketRegistration = () => {
 
       for (const player of players) {
         const playerData = new FormData();
+        playerData.append("event", "Cricket");
         playerData.append("teamName", teamInfo.collegeName);
         playerData.append("playerNumber", players.indexOf(player) + 1);
         playerData.append("name", player.name);
-        playerData.append("age", player.age);
-        playerData.append("role", player.role);
-        playerData.append("email", player.email);
-        playerData.append("mobile", player.mobile);
-        playerData.append("enrollmentNo", player.enrollmentNo);
+
+        // playerData.append("age", player.age);
+        // playerData.append("role", player.role);
+        // playerData.append("email", player.email);
+        // playerData.append("mobile", player.mobile);
+        // playerData.append("enrollmentNo", player.enrollmentNo);
         playerData.append("aadharNo", player.aadharNo);
         const playerResponse = await fetch(Url, {
           method: "POST",
@@ -75,12 +78,7 @@ const CricketRegistration = () => {
       setPlayers([
         {
           name: "",
-          age: "",
-          email: "",
-          mobile: "",
-          enrollmentNo: "",
           aadharNo: "",
-          role: "",
         },
       ]);
 
@@ -117,12 +115,7 @@ const CricketRegistration = () => {
   const [players, setPlayers] = useState([
     {
       name: "",
-      age: "",
-      email: "",
-      mobile: "",
-      enrollmentNo: "",
       aadharNo: "",
-      role: "",
     },
   ]);
   const [teamInfo, setTeamInfo] = useState({
@@ -155,12 +148,7 @@ const CricketRegistration = () => {
         ...players,
         {
           name: "",
-          age: "",
-          email: "",
-          mobile: "",
-          enrollmentNo: "",
           aadharNo: "",
-          role: "",
         },
       ]);
     }
@@ -193,10 +181,10 @@ const CricketRegistration = () => {
       >
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-white mb-4">
+            <h1 className="text-4xl font-bold text-#264d8c mb-4">
               Cricket Team Registration
             </h1>
-            <p className="text-gray-300">
+            <p className="text-#264d8c-300">
               Register your team for Shauryotsava 2025
             </p>
           </div>
@@ -301,7 +289,7 @@ const CricketRegistration = () => {
                   <h3 className="text-lg font-medium text-white mb-4">
                     Player {index + 1}
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-gray-300 mb-2">
                         Full Name
@@ -311,79 +299,6 @@ const CricketRegistration = () => {
                         value={player.name}
                         onChange={(e) =>
                           handlePlayerChange(index, "name", e.target.value)
-                        }
-                        className="w-full bg-gray-600 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-gray-300 mb-2">Age</label>
-                      <input
-                        type="number"
-                        value={player.age}
-                        onChange={(e) =>
-                          handlePlayerChange(index, "age", e.target.value)
-                        }
-                        className="w-full bg-gray-600 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-gray-300 mb-2">Role</label>
-                      <select
-                        value={player.role}
-                        onChange={(e) =>
-                          handlePlayerChange(index, "role", e.target.value)
-                        }
-                        className="w-full bg-gray-600 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                        required
-                      >
-                        <option value="">Select Role</option>
-                        <option value="batsman">Batsman</option>
-                        <option value="bowler">Bowler</option>
-                        <option value="all-rounder">All-Rounder</option>
-                        <option value="wicket-keeper">Wicket Keeper</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-gray-300 mb-2">Email</label>
-                      <input
-                        type="email"
-                        value={player.email}
-                        onChange={(e) =>
-                          handlePlayerChange(index, "email", e.target.value)
-                        }
-                        className="w-full bg-gray-600 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-gray-300 mb-2">
-                        Mobile Number
-                      </label>
-                      <input
-                        type="tel"
-                        value={player.mobile}
-                        onChange={(e) =>
-                          handlePlayerChange(index, "mobile", e.target.value)
-                        }
-                        className="w-full bg-gray-600 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-gray-300 mb-2">
-                        Enrollment Number
-                      </label>
-                      <input
-                        type="text"
-                        value={player.enrollmentNo}
-                        onChange={(e) =>
-                          handlePlayerChange(
-                            index,
-                            "enrollmentNo",
-                            e.target.value
-                          )
                         }
                         className="w-full bg-gray-600 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                         required

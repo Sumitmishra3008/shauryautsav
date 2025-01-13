@@ -143,7 +143,7 @@ const About = () => {
             <Card
               image="images/sandeep.jpg"
               designation="Team Lead"
-              linkedinUrl="https://www.google.com"
+              linkedinUrl="https://www.linkedin.com/in/sandeep-patel-086a68299/"
               instagramUrl="https://www.google.com"
             />
             <Card

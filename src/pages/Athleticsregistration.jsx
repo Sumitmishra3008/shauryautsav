@@ -1,15 +1,121 @@
 import React, { useState } from "react";
 
 const Athleticsregistration = () => {
+  const GOOGLE_SCRIPT_URL = import.meta.env.VITE_API1;
+  const Url = import.meta.env.VITE_API2; // Replace with your URL
+  // Replace with your URL
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // First submit team info
+    const teamData = new FormData();
+    teamData.append("timestamp", new Date().toISOString());
+    teamData.append("captainEmail", teamInfo.captainEmail);
+    teamData.append("captainName", teamInfo.captainName);
+    teamData.append("captainPhone", teamInfo.captainPhone);
+    teamData.append("collegeName", teamInfo.collegeName);
+    teamData.append("event", "Athletics");
+    // const teamData = {
+    //   timestamp: new Date().toISOString(),
+    //   captainEmail: teamInfo.captainEmail,
+    //   captainName: teamInfo.captainName,
+    //   captainPhone: teamInfo.captainPhone,
+    //   collegeName: teamInfo.collegeName,
+    // };
+
+    // await submitToGoogleSheets(teamData, "Teams");
+
+    // Then submit each player's info
+    // for (const player of players) {
+    //   const playerData = {
+    //     teamName: teamInfo.collegeName,
+    //     ...player,
+    //   };
+    //   await submitToGoogleSheets(playerData, "Players");
+    // }
+
+    // Show success message
+    try {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        body: teamData,
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      for (const player of players) {
+        const playerData = new FormData();
+        playerData.append("event", "");
+        playerData.append("teamName", teamInfo.collegeName);
+        playerData.append("playerNumber", players.indexOf(player) + 1);
+        playerData.append("name", player.name);
+
+        // playerData.append("age", player.age);
+        // playerData.append("role", player.role);
+        // playerData.append("email", player.email);
+        // playerData.append("mobile", player.mobile);
+        // playerData.append("enrollmentNo", player.enrollmentNo);
+        playerData.append("aadharNo", player.aadharNo);
+        const playerResponse = await fetch(Url, {
+          method: "POST",
+          body: playerData,
+        });
+      }
+
+      setSubmitted(true);
+
+      // Reset form
+      setTeamInfo({
+        collegeName: "",
+        captainName: "",
+        captainEmail: "",
+        captainPhone: "",
+      });
+
+      setPlayers([
+        {
+          name: "",
+          aadharNo: "",
+        },
+      ]);
+
+      // Reload after delay
+      //   setTimeout(() => {
+      //     window.location.reload();
+      //   }, 3000);
+      // }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Error submitting registration. Please try again.");
+    }
+  };
+
+  // const submitToGoogleSheets = async (data, sheetName) => {
+  //   const response = await fetch(GOOGLE_SCRIPT_URL, {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       data: data,
+  //       sheet: sheetName,
+  //     }),
+  //   });
+
+  //   if (!response.ok) {
+  //     throw new Error("Failed to submit data");
+  //   }
+
+  //   return response.json();
+  // };
+
   const [players, setPlayers] = useState([
     {
       name: "",
-      age: "",
-      email: "",
-      mobile: "",
-      enrollmentNo: "",
       aadharNo: "",
-      role: "",
     },
   ]);
   const [teamInfo, setTeamInfo] = useState({
@@ -42,12 +148,7 @@ const Athleticsregistration = () => {
         ...players,
         {
           name: "",
-          age: "",
-          email: "",
-          mobile: "",
-          enrollmentNo: "",
           aadharNo: "",
-          role: "",
         },
       ]);
     }
@@ -60,12 +161,12 @@ const Athleticsregistration = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-    // Add your form submission logic here
-    setTimeout(() => setSubmitted(false), 3000);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setSubmitted(true);
+  //   // Add your form submission logic here
+  //   setTimeout(() => setSubmitted(false), 3000);
+  // };
 
   return (
     <section className="relative py-16 bg-gray-900 min-h-screen w-full">
@@ -80,10 +181,10 @@ const Athleticsregistration = () => {
       >
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-white mb-4">
-              Basketball Team Registration
+            <h1 className="text-4xl font-bold text-#264d8c mb-4">
+              Ahletics Team Registration
             </h1>
-            <p className="text-gray-300">
+            <p className="text-#264d8c-300">
               Register your team for Shauryotsava 2025
             </p>
           </div>
@@ -204,79 +305,6 @@ const Athleticsregistration = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-gray-300 mb-2">Age</label>
-                      <input
-                        type="number"
-                        value={player.age}
-                        onChange={(e) =>
-                          handlePlayerChange(index, "age", e.target.value)
-                        }
-                        className="w-full bg-gray-600 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-gray-300 mb-2">Role</label>
-                      <select
-                        value={player.role}
-                        onChange={(e) =>
-                          handlePlayerChange(index, "role", e.target.value)
-                        }
-                        className="w-full bg-gray-600 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                        required
-                      >
-                        <option value="">Select Role</option>
-                        <option value="batsman">Batsman</option>
-                        <option value="bowler">Bowler</option>
-                        <option value="all-rounder">All-Rounder</option>
-                        <option value="wicket-keeper">Wicket Keeper</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-gray-300 mb-2">Email</label>
-                      <input
-                        type="email"
-                        value={player.email}
-                        onChange={(e) =>
-                          handlePlayerChange(index, "email", e.target.value)
-                        }
-                        className="w-full bg-gray-600 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-gray-300 mb-2">
-                        Mobile Number
-                      </label>
-                      <input
-                        type="tel"
-                        value={player.mobile}
-                        onChange={(e) =>
-                          handlePlayerChange(index, "mobile", e.target.value)
-                        }
-                        className="w-full bg-gray-600 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-gray-300 mb-2">
-                        Enrollment Number
-                      </label>
-                      <input
-                        type="text"
-                        value={player.enrollmentNo}
-                        onChange={(e) =>
-                          handlePlayerChange(
-                            index,
-                            "enrollmentNo",
-                            e.target.value
-                          )
-                        }
-                        className="w-full bg-gray-600 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                        required
-                      />
-                    </div>
-                    <div>
                       <label className="block text-gray-300 mb-2">
                         Aadhar Number
                       </label>
@@ -289,6 +317,23 @@ const Athleticsregistration = () => {
                         className="w-full bg-gray-600 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                         required
                       />
+                    </div>
+                    <div>
+                      <label className="block text-gray-300 mb-2">Event</label>
+                      <select
+                        value={player.role}
+                        onChange={(e) =>
+                          handlePlayerChange(index, "role", e.target.value)
+                        }
+                        className="w-full bg-gray-600 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                        required
+                      >
+                        <option value="">Select Event</option>
+                        <option value="batsman">Batsman</option>
+                        <option value="bowler">Bowler</option>
+                        <option value="all-rounder">All-Rounder</option>
+                        <option value="wicket-keeper">Wicket Keeper</option>
+                      </select>
                     </div>
                   </div>
                 </div>
