@@ -143,7 +143,7 @@ const Athleticsregistration = () => {
   };
 
   const addPlayer = () => {
-    if (players.length < 12) {
+    if (players.length < 30) {
       setPlayers([
         ...players,
         {
@@ -263,10 +263,10 @@ const Athleticsregistration = () => {
                 <button
                   type="button"
                   onClick={addPlayer}
-                  disabled={players.length >= 12}
+                  disabled={players.length >= 30}
                   className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg disabled:opacity-50"
                 >
-                  Add Player ({players.length}/12)
+                  Add Player ({players.length}/30)
                 </button>
               </div>
 
@@ -289,7 +289,7 @@ const Athleticsregistration = () => {
                   <h3 className="text-lg font-medium text-white mb-4">
                     Player {index + 1}
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-gray-300 mb-2">
                         Full Name
@@ -317,23 +317,6 @@ const Athleticsregistration = () => {
                         className="w-full bg-gray-600 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
                         required
                       />
-                    </div>
-                    <div>
-                      <label className="block text-gray-300 mb-2">Event</label>
-                      <select
-                        value={player.role}
-                        onChange={(e) =>
-                          handlePlayerChange(index, "role", e.target.value)
-                        }
-                        className="w-full bg-gray-600 text-white rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                        required
-                      >
-                        <option value="">Select Event</option>
-                        <option value="batsman">Batsman</option>
-                        <option value="bowler">Bowler</option>
-                        <option value="all-rounder">All-Rounder</option>
-                        <option value="wicket-keeper">Wicket Keeper</option>
-                      </select>
                     </div>
                   </div>
                 </div>
