@@ -87,7 +87,7 @@ const EventsSection2 = () => {
                   </span>
                   <div className="flex gap-2">
                     <Button color="blue" onClick={handleCloseModal}>
-                      Close
+                      Rulebook
                     </Button>
                     <Button
                       color="green"
