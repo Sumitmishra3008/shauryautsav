@@ -22,7 +22,7 @@ const Home = () => {
           </div>
 
           {/* Main Title with Enhanced Typography */}
-          <h1 className="mb-6 text-5xl sm:text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-orange-800 to-yellow-500 ">
+          <h1 className="mb-6 text-5xl sm:text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-white ">
             Shauryotsava 2025
           </h1>
 
@@ -33,7 +33,7 @@ const Home = () => {
 
           {/* Date with Special Styling */}
           <div className="mb-12 inline-block px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full">
-            <p className="text-lg sm:text-xl font-semibold text-green-950 tracking-widest">
+            <p className="text-lg sm:text-xl font-semibold text-white tracking-widest">
               21 - 23 FEBRUARY 2025
             </p>
           </div>
