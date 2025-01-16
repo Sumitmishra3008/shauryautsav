@@ -89,7 +89,7 @@ const About = () => {
             />
           </div>
           <h1 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white drop-shadow-lg">
-            Welcome to Shouryotsava
+            Welcome to Shauryotsava
           </h1>
           <p className="text-lg md:text-xl text-center text-white/90">
             A celebration of sportsmanship and teamwork

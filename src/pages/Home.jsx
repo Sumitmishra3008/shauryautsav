@@ -13,13 +13,6 @@ const Home = () => {
       <div className="relative h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-7xl mx-auto">
           {/* Logo Container with Animation */}
-          <div className="mb-0 sm:mb-0 flex justify-center transform hover:scale-105 transition-transform duration-300">
-            <img
-              src="images/shauryotsava_logo2.png"
-              alt="Shauryotsava Logo"
-              className="w-72 sm:w-80 md:w-96 object-contain"
-            />
-          </div>
 
           {/* Main Title with Enhanced Typography */}
           <h1 className="mb-6 text-5xl sm:text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-white ">
@@ -36,6 +29,14 @@ const Home = () => {
             <p className="text-lg sm:text-xl font-semibold text-white tracking-widest">
               21 - 23 FEBRUARY 2025
             </p>
+          </div>
+
+          <div className="mb-0 sm:mb-0 flex justify-center transform hover:scale-105 transition-transform duration-300">
+            <img
+              src="images/shauryotsava_logo2.png"
+              alt="Shauryotsava Logo"
+              className="w-72 sm:w-80 md:w-96 object-contain"
+            />
           </div>
 
           {/* Enhanced Button Container */}
