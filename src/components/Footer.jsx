@@ -38,7 +38,7 @@ function components() {
                   href="mailto:Shauryotsava@gmail.com"
                   className="text-center sm:text-left"
                 >
-                  Shauryotsava@gmail.com
+                  Shauryotsava@ietlucknow.ac.in
                 </Footer.Link>
               </Footer.LinkGroup>
             </div>

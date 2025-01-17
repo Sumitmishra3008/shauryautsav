@@ -162,7 +162,12 @@ const Register = () => {
 
           {/* Call to Action */}
           <div className="text-center mt-8 sm:mt-12">
-            <button className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base font-semibold">
+            <button
+              className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base font-semibold"
+              onClick={() => {
+                Navigate("/events");
+              }}
+            >
               Register Now
             </button>
           </div>

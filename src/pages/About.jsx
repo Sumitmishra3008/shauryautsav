@@ -129,9 +129,9 @@ const About = () => {
 
           <MessageCard
             image="images/pkt.png"
-            message="Shauryotsava 2024, a celebration of excellence, teamwork, and sportsmanship. It is an opportunity to push boundaries, build connections, and inspire through determination and integrity. To all participants, wishing them success—let the games commence!"
+            message="Shauryotsava 2025, a celebration of excellence, teamwork, and sportsmanship. It is an opportunity to push boundaries, build connections, and inspire through determination and integrity. To all participants, wishing them success—let the games commence!"
             name="Dr. Pawan Kumar Tiwari"
-            designation="Sports Faculty Advisor and Shauryotsava Chairman, IET Lucknow"
+            designation="Sports Faculty Advisor and Shauryotsava President, IET Lucknow"
           />
         </div>
 
@@ -143,8 +143,8 @@ const About = () => {
             <Card
               image="images/sandeep.jpg"
               designation="Team Lead"
-              linkedinUrl="https://www.linkedin.com/in/sandeep-patel-086a68299/"
-              instagramUrl="https://www.google.com"
+              linkedinUrl="https://www.linkedin.com/in/sandeep-patel-086a68299"
+              instagramUrl="https://www.instagram.com/sandeep_patel.60/"
             />
             <Card
               image="images/abhishek.jpg"
@@ -155,8 +155,8 @@ const About = () => {
             <Card
               image="images/mansi.jpg"
               designation="Coordinator"
-              linkedinUrl="https://www.google.com"
-              instagramUrl="https://www.google.com"
+              linkedinUrl="https://www.linkedin.com/in/mansi-kashyap-9a3165292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              instagramUrl="https://www.instagram.com/mansi_kashyap09?igsh=MTY1aG5jZGl1cnkxZA=="
             />
           </div>
         </div>
