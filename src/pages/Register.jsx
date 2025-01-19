@@ -1,6 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
+  const handleRegister = () => {
+    navigate("/events");
+  };
   return (
     <section className="relative py-16 bg-gray-900 min-h-screen w-full">
       <div
@@ -164,9 +169,7 @@ const Register = () => {
           <div className="text-center mt-8 sm:mt-12">
             <button
               className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base font-semibold"
-              onClick={() => {
-                Navigate("/events");
-              }}
+              onClick={() => handleRegister()}
             >
               Register Now
             </button>
