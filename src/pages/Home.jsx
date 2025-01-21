@@ -23,7 +23,7 @@ const Home = () => {
 
           {/* Main Title with Enhanced Typography */}
           <h1 className="mb-6 text-5xl sm:text-6xl md:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-white ">
-            Shauryotsava-2025
+            Shauryotsava---2025
           </h1>
 
           {/* Tagline with Improved Styling */}
