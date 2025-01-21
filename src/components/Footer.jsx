@@ -35,7 +35,7 @@ function components() {
                   IET Lucknow, Uttar Pradesh
                 </Footer.Link>
                 <Footer.Link
-                  href="mailto:Shauryotsava@gmail.com"
+                  href="mailto:shauryotsava@ietlucknow.ac.in"
                   className="text-center sm:text-left"
                 >
                   Shauryotsava@ietlucknow.ac.in
@@ -85,14 +85,6 @@ function components() {
             <Footer.Icon
               href="https://www.twitter.com/shauryotsava"
               icon={BsTwitter}
-            />
-            <Footer.Icon
-              href="https://www.github.com/shauryotsava"
-              icon={BsGithub}
-            />
-            <Footer.Icon
-              href="https://www.dribbble.com/shauryotsava"
-              icon={BsDribbble}
             />
           </div>
         </div>

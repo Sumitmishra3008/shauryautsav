@@ -18,7 +18,7 @@ import Footballregistration from "./pages/Footballregistration.jsx";
 import Taekwondoregistration from "./pages/Taekwondoregistration.jsx";
 import Kabaddiregistration from "./pages/Kabaddiregistration.jsx";
 import Ttregistration from "./pages/Ttregistration.jsx";
-import CricketRegistration from "./pages/CricketRegistration.jsx";
+import CricketRegistration2 from "./pages/CricketRegistration.jsx";
 
 const App = () => {
   return (
@@ -38,7 +38,7 @@ const App = () => {
           <Route path="/register/3" element={<Chessregistration />} />
           <Route path="/register/4" element={<Athleticsregistration />} />
           <Route path="/register/5" element={<Badmintonregistration />} />
-          <Route path="/register/6" element={<CricketRegistration />} />
+          <Route path="/register/6" element={<CricketRegistration2 />} />
           <Route path="/register/7" element={<Footballregistration />} />
           <Route path="/register/8" element={<Taekwondoregistration />} />
           <Route path="/register/9" element={<Kabaddiregistration />} />
