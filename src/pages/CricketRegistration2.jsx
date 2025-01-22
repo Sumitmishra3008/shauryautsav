@@ -50,8 +50,6 @@ const CricketRegistration = () => {
 
     try {
       console.log("Sending email with params:", templateParams); // Debug log
-      console.log("Using Service ID:", EMAIL_SERVICE_ID); // Debug log
-      console.log("Using Template ID:", EMAIL_TEMPLATE_ID); // Debug log
 
       const response = await emailjs.send(
         EMAIL_SERVICE_ID,
@@ -113,7 +111,6 @@ const CricketRegistration = () => {
         }
       }
 
-      // Send confirmation email
       try {
         await sendConfirmationEmail();
         console.log("Email sent successfully");
@@ -125,8 +122,24 @@ const CricketRegistration = () => {
         // Continue with form reset despite email failure
       }
 
+      // Send confirmation email
+
       setSubmitted(true);
       // Reset form...
+      // Reset all form data
+      setTeamInfo({
+        captainEmail: "",
+        captainName: "",
+        captainPhone: "",
+        collegeName: "",
+      });
+
+      setPlayers([
+        {
+          name: "",
+          aadharNo: "",
+        },
+      ]);
     } catch (error) {
       console.error("Submission error:", error);
       alert("Error submitting registration. Please try again.");

@@ -18,7 +18,7 @@ import Footballregistration from "./pages/Footballregistration.jsx";
 import Taekwondoregistration from "./pages/Taekwondoregistration.jsx";
 import Kabaddiregistration from "./pages/Kabaddiregistration.jsx";
 import Ttregistration from "./pages/Ttregistration.jsx";
-import CricketRegistration2 from "./pages/CricketRegistration.jsx";
+import CricketRegistration2 from "./pages/CricketRegistration2.jsx";
 
 const App = () => {
   return (

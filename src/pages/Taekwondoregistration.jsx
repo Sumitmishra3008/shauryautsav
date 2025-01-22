@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import emailjs from "@emailjs/browser";
 
 const Taekwondoregistration = () => {
   const GOOGLE_SCRIPT_URL = import.meta.env.VITE_API1;
   const Url = import.meta.env.VITE_API2;
+  const EMAIL_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const EMAIL_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const EMAIL_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
   const [isLoading, setIsLoading] = useState(false);
   const [players, setPlayers] = useState([
@@ -18,6 +22,50 @@ const Taekwondoregistration = () => {
     captainPhone: "",
   });
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    try {
+      emailjs.init(EMAIL_PUBLIC_KEY);
+      console.log("EmailJS initialized successfully");
+
+      // Verify environment variables are loaded
+      if (!EMAIL_SERVICE_ID || !EMAIL_TEMPLATE_ID || !EMAIL_PUBLIC_KEY) {
+        console.error("Missing required EmailJS environment variables");
+      }
+    } catch (error) {
+      console.error("Error initializing EmailJS:", error);
+    }
+  }, []);
+
+  const sendConfirmationEmail = async () => {
+    const templateParams = {
+      to_email: teamInfo.captainEmail,
+      to_name: teamInfo.captainName,
+      college_name: teamInfo.collegeName,
+      team_size: players.length,
+      player_list: players
+        .map((player, index) => `${index + 1}. ${player.name}`)
+        .join("\n"),
+    };
+
+    try {
+      console.log("Sending email with params:", templateParams); // Debug log
+
+      const response = await emailjs.send(
+        EMAIL_SERVICE_ID,
+        EMAIL_TEMPLATE_ID,
+        templateParams
+      );
+
+      console.log("Email sent successfully:", response); // Log success response
+    } catch (error) {
+      console.error(
+        "Error sending confirmation email:",
+        error.text || error.message
+      );
+      throw error; // Re-throw to handle in handleSubmit
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -53,6 +101,17 @@ const Taekwondoregistration = () => {
           method: "POST",
           body: playerData,
         });
+      }
+
+      try {
+        await sendConfirmationEmail();
+        console.log("Email sent successfully");
+      } catch (emailError) {
+        console.error("Failed to send confirmation email:", emailError);
+        alert(
+          "Registration successful but failed to send confirmation email. Please check your email settings."
+        );
+        // Continue with form reset despite email failure
       }
 
       setSubmitted(true);
