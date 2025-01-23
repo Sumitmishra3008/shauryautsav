@@ -29,7 +29,8 @@ function components() {
               <Footer.Title title="Shauryotsava" />
               <Footer.LinkGroup col>
                 <Footer.Link
-                  href="https://maps.google.com/IETLucknow"
+                  href="https://www.google.com/maps/place/Institute+of+Engineering+and+Technology+(IET)/@26.9177579,80.935588,16z/data=!4m10!1m2!2m1!1siet+lucknow!3m6!1s0x3999564d2761d695:0xffaa6ccef8c6ddae!8m2!3d26.9142926!4d80.9419138!15sCgtpZXQgbHVja25vd5IBB2NvbGxlZ2XgAQA!16s%2Fg%2F1215cd52?entry=ttu&g_ep=EgoyMDI1MDEyMC4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
                   className="text-center sm:text-left"
                 >
                   IET Lucknow, Uttar Pradesh
@@ -75,16 +76,14 @@ function components() {
           />
           <div className="flex space-x-6 justify-center w-full sm:w-auto">
             <Footer.Icon
-              href="https://www.facebook.com/shauryotsava"
+              href="https://www.facebook.com/share/15xD21VxVV/"
+              target="_blank"
               icon={BsFacebook}
             />
             <Footer.Icon
-              href="https://www.instagram.com/shauryotsava"
+              href="https://www.instagram.com/shauryotsava_ietlko"
+              target="_blank"
               icon={BsInstagram}
-            />
-            <Footer.Icon
-              href="https://www.twitter.com/shauryotsava"
-              icon={BsTwitter}
             />
           </div>
         </div>

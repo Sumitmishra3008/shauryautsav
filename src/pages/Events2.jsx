@@ -19,6 +19,20 @@ const EventsSection2 = () => {
     navigate(`/register/${eventId}`);
   };
 
+  const handleRulebookClick = () => {
+    if (selectedEvent && selectedEvent.rulebook) {
+      window.open(selectedEvent.rulebook, "_blank");
+      const link = document.createElement("a");
+      link.href = selectedEvent.rulebook;
+      link.download = `${selectedEvent.name}_Rulebook.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      alert("Rulebook not available for this event.");
+    }
+  };
+
   return (
     <section className="relative py-16 bg-gray-900 min-h-screen w-full">
       <div
@@ -86,7 +100,7 @@ const EventsSection2 = () => {
                     Date: {selectedEvent.date}
                   </span>
                   <div className="flex gap-2">
-                    <Button color="blue" onClick={handleCloseModal}>
+                    <Button color="blue" onClick={handleRulebookClick}>
                       Rulebook
                     </Button>
                     <Button

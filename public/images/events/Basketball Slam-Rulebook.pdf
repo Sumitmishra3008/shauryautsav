@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <script type="module">
+import RefreshRuntime from "/@react-refresh"
+RefreshRuntime.injectIntoGlobalHook(window)
+window.$RefreshReg$ = () => {}
+window.$RefreshSig$ = () => (type) => type
+window.__vite_plugin_react_preamble_installed__ = true
+</script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/images/shauryotsava_logo.jpg"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shauryotsava 2025 is the annual sports fest of IET,Lucknow UttarPradesh."
+    />
+    <meta
+      name="keywords"
+      content="Shauryotsava, Shauryotsava 2025, IET-Lucknow , Sports Fest, Sports, Fest, 2025"
+    />
+    <title>Shauryotsava 2025</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx?t=1737538069439"></script>
+  </body>
+</html>
