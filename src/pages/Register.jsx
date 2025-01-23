@@ -18,6 +18,7 @@ const Register = () => {
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+
       <div className="relative h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         {/* <header className="bg-blue-900 text-white py-8 sm:py-12 px-4 text-center">
@@ -32,6 +33,14 @@ const Register = () => {
         {/* Main Content */}
         <main className="px-4 sm:px-6 py-8 sm:py-12 max-w-5xl mx-auto">
           {/* Why Register Section */}
+          <div className="text-center mt-8 sm:mt-12">
+            <button
+              className="w-full sm:w-auto px-6 py-3 mb-12 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base font-semibold"
+              onClick={() => handleRegister()}
+            >
+              Register Now
+            </button>
+          </div>
           <header className="bg-blue-900 text-white py-8 sm:py-12 px-4 text-center">
             <h1 className="text-3xl sm:text-4xl font-bold">
               Rules of Registration
@@ -166,14 +175,6 @@ const Register = () => {
           </section>
 
           {/* Call to Action */}
-          <div className="text-center mt-8 sm:mt-12">
-            <button
-              className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base font-semibold"
-              onClick={() => handleRegister()}
-            >
-              Register Now
-            </button>
-          </div>
         </main>
       </div>
     </section>
