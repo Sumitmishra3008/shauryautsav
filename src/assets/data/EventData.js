@@ -103,4 +103,16 @@ export const eventsData = [
       "Showcase of speed, strength, and athletic excellence across multiple disciplines.",
     rulebook: "./table_tennis.pdf",
   },
+
+  {
+    id: 11,
+    name: "E-sports Championship",
+    description:
+      "Mental athleticism and precision on display in this fast-paced digital sport.",
+    date: "21-23 February",
+    image: "/images/events/esports.webp",
+    details:
+      "Showcase of speed, strength, and athletic excellence across multiple disciplines.",
+    rulebook: "./esports_rulebook.pdf",
+  },
 ];

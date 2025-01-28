@@ -16,6 +16,10 @@ const EventsSection2 = () => {
   };
 
   const handleRegister = (eventId) => {
+    if (eventId == 11) {
+      window.open("https://forms.gle/JDeUQHYahZruVUNh7", "_blank");
+      return;
+    }
     navigate(`/register/${eventId}`);
   };
 

@@ -6,6 +6,17 @@ const Register = () => {
   const handleRegister = () => {
     navigate("/events");
   };
+
+  const handleRulebookClick = () => {
+    window.open("../fullrulebook.pdf", "_blank");
+    const link = document.createElement("a");
+    link.href = "../fullrulebook.pdf";
+    link.download = "Shauryotsava_Rulebook.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="relative py-16 bg-gray-900 min-h-screen w-full">
       <div
@@ -33,12 +44,18 @@ const Register = () => {
         {/* Main Content */}
         <main className="px-4 sm:px-6 py-8 sm:py-12 max-w-5xl mx-auto">
           {/* Why Register Section */}
-          <div className="text-center mt-8 sm:mt-12">
+          <div className="text-center mt-8 sm:mt-12 display: flex justify-right gap-4">
             <button
-              className="w-full sm:w-auto px-6 py-3 mb-12 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base font-semibold"
+              className="w-full sm:w-auto px-6 py-3 mb-12 bg-blue-600 text-white rounded-lg hover:bg-blue-900 transition-colors text-sm sm:text-base font-semibold"
               onClick={() => handleRegister()}
             >
               Register Now
+            </button>
+            <button
+              className="w-full sm:w-auto px-6 py-3 mb-12 bg-green-600 text-white rounded-lg hover:bg-green-900 transition-colors text-sm sm:text-base font-semibold"
+              onClick={() => handleRulebookClick()}
+            >
+              Rulebook
             </button>
           </div>
           <header className="bg-blue-900 text-white py-8 sm:py-12 px-4 text-center">
