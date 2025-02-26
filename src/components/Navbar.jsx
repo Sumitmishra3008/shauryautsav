@@ -62,12 +62,12 @@ const Header = () => {
             >
               Events
             </Link>
-            <Link
+            {/* <Link
               className="text-gray-700 hover:text-blue-500 dark:text-white py-2"
               to="/team"
             >
               Team
-            </Link>
+            </Link> */}
             <Link
               className="text-gray-700 hover:text-blue-500 dark:text-white py-2"
               to="/sponsors"
@@ -129,13 +129,13 @@ const Header = () => {
             >
               Events
             </Link>
-            <Link
+            {/* <Link
               className="text-gray-700 hover:text-blue-500 dark:text-white py-2"
               to="/team"
               onClick={() => setIsMenuOpen(false)}
             >
               Team
-            </Link>
+            </Link> */}
             <Link
               className="text-gray-700 hover:text-blue-500 dark:text-white py-2"
               to="/sponsors"
