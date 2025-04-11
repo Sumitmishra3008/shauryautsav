@@ -133,11 +133,11 @@ These variables are used for:
 
 ### Events Page
 
-![Events Page](public/images/screenshots/events_page.png)
+![Events Page](public/images/screenshots/event.png)
 
 ### Registration Form
 
-![Registration Form](public/images/screenshots/registration_form.png)
+![Registration Form](public/images/screenshots/registration.png)
 
 ---
 
